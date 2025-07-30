@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phishing Awareness Demo</title>
+</head>
+<body style="text-align: center; font-family: Arial; padding-top: 50px;">
+
+  <h1>🎯 Phishing Awareness</h1>
+  <p>This is a simple demo for educational purposes.</p>
+
+  <hr>
+
+  <h2>Fake Login Page</h2>
+  <form onsubmit="showWarning(event)">
+    <input type="text" placeholder="Email"><br><br>
+    <input type="password" placeholder="Password"><br><br>
+    <button type="submit">Login</button>
+  </form>
+  <p id="warning" style="color: red;"></p>
+
+  <hr>
+
+  <h2>Fake Prize Alert</h2>
+  <p>You just won a free iPhone!</p>
+  <button onclick="alert('⚠️ Warning: This is a phishing simulation. Don’t trust fake prizes.')">Claim Now</button>
+
+  <hr>
+
+  <h2>Phishing Safety Tips</h2>
+  <ul style="display: inline-block; text-align: left;">
+    <li>✔️ Never click unknown links</li>
+    <li>✔️ Check the URL carefully</li>
+    <li>✔️ Look for HTTPS</li>
+    <li>✔️ Don’t share passwords online</li>
+  </ul>
+
+  <script>
+    function showWarning(event) {
+      event.preventDefault();
+      document.getElementById("warning").innerText =
+        "⚠️ This is a phishing simulation. Never enter real credentials here!";
+    }
+  </script>
+
+</body>
+</html>
